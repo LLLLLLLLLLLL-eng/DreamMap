@@ -1,0 +1,128 @@
+You are building a mobile-first web application called Congruence, designed to help users stay aligned with their long-term goals and identity by using AI-driven questioning, habit creation, and progress tracking. Please generate the scaffolding, frontend, backend, and basic AI integration.
+
+📱 Platform & Tech Stack
+Build as a mobile-first responsive web app (PWA-capable so it can be installed like a mobile app).
+
+Use React (Next.js or Vite with React) for the frontend.
+
+Use Node.js/Express (or Next.js API routes) for backend logic.
+
+Store user data (goals, habits, progress) in a lightweight DB such as Supabase/PostgreSQL (or Firebase if simpler).
+
+Include authentication via Supabase Auth or Firebase Auth (email & social login).
+
+AI reasoning and question generation should integrate with OpenAI or a similar LLM API (abstract calls into a backend route).
+
+🔑 User Flow
+Login / Signup Page
+
+Simple, clean sign-in/sign-up page.
+
+Support Google + Email login.
+
+First-Time User Onboarding (AI Blueprint Creation)
+
+After login, new users are prompted by an AI-powered Q&A flow:
+
+Direct questions: "Who do you want to become?" "What traits matter to you?"
+
+Indirect questions: lifestyle, career, relationships, personal growth.
+
+Output of Q&A = "Blueprint" → JSON structure containing:
+
+identity_goal (who they want to be)
+
+current_state (where they are now)
+
+focus_areas (e.g., career, social life, fitness)
+
+daily_habits (AI-generated)
+
+Save blueprint to user database.
+
+Main Dashboard ("Who You Want To Be")
+
+Daily landing page shows:
+
+Their identity goal (reminder of their blueprint).
+
+Motivational/engaging design (inspiring background, minimalist UI).
+
+Tabs/links to:
+
+Daily Habits Section
+
+Blueprint Section (view/adjust)
+
+Progress Tracking Section
+
+Daily Habits Section
+
+List of habits generated from the blueprint.
+
+Users can mark them as complete (checkbox or swipe action).
+
+Track streaks and completions in DB.
+
+Blueprint Section
+
+Displays the personal blueprint summary.
+
+"Adjust with AI" button → calls AI again with user updates to refine daily habits or goals.
+
+Progress Tracking Section
+
+Visual metrics (simple charts/graphs) on focus areas user defined in blueprint.
+
+Progress determined by:
+
+Habit completion rate
+
+Self-assessment prompts (weekly check-ins)
+
+Example metrics: Charisma ✅ Career ✅ Fitness ✅
+
+🎨 Design & Feel
+Minimalist, focused on clarity.
+
+Engaging but simple: soft color gradients, a background image/theme that changes slightly depending on progress.
+
+Typography should feel motivating & clean (Roboto, Inter, or Poppins).
+
+⚙️ Core Features to Implement
+Authentication (Supabase/Firebase).
+
+AI integration (OpenAI API for questioning, blueprint refinement, and habit generation).
+
+Habit storage + completion tracking.
+
+Progress metrics calculation.
+
+Blueprint storage & retrieval.
+
+Mobile-optimized layout (works primarily for phones).
+
+PWA configuration so users can "install" the app to their home screen.
+
+✅ Deliverables in Initial Build
+Code scaffold for frontend + backend.
+
+Example onboarding flow with mock AI prompts (hardcode JSON if AI API not set up yet).
+
+Basic habit list UI with checkboxes.
+
+Progress dashboard using mock data.
+
+Database model stubs for users, blueprints, habits, progress.
+
+Authentication integrated and working.
+
+Once this scaffold is generated, we can expand on:
+
+AI refinement & better blueprinting.
+
+Push/local notifications for daily habit reminders.
+
+Social features (optional: share progress with friends).
+
+👉 Instruction to Replit: Please start by generating the full-stack scaffold of this app with the above requirements. Include working authentication, dummy AI integration placeholders, and basic UI navigation between Login → Onboarding → Main Dashboard → Habits → Blueprint → Progress.
